@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto: Tienda Online</title>
+
+    <!-- Enlaces a Bootstrap y CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.5.3.3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    
+</head>
+
+<body>
+    <header>
+        <section id="pre-encabezado">
+            <div class="logo">
+                <span class="papi">SCOTT</span>
+                <span class="shop">SHOP</span>
+            </div>
+            <div class="servicio">
+                <p>Llamanos mano</p>
+                <a href="tel:+43693 422">(43) - 693 422</a>
+            </div>
+        </section>
+
+        <section id="nav-arriba" class="bg-dark mb-3">
+            
+                <ul class="horizontal">
+                   
+                </ul>
+            
+               
+            </div>
+
+            <nav class="text-white">
+                <ul id="encabezado">
+                    <li><a class="nav-item nav-link" href="index.html">Inicio</a></li>
+                    <li><a class="nav-item nav-link" href="productos.html">Productos</a></li>
+                    <li>
+                        <a class="nav-item nav-link" href="carrito.html">Carrito</a>
+
+                    </li>
+
+                    <li>
+                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+            <div>
+                <img class="corazon" src="img/ico-corazon.png" alt="" />
+                <img class="carrito" src="img/carrito.png" alt=""  />
+            </div>
+        </section>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="container mt-5">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <div class="row">
+                <!-- Información de contacto -->
+                <div class="col-md-6">
+                    <h4>Información de Contacto</h4>
+                    <p>¿Tienes dudas o comentarios? Contáctanos por los siguientes medios:</p>
+                    <ul>
+                        <li><strong>Teléfono:</strong> <a href="tel:+43693 422">(43) - 693 422</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:soporte@papishop.com">soporte@papishop.com</a></li>
+                        <li><strong>Dirección:</strong> Av. Principal 123, Ciudad, País</li>
+                    </ul>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="col-md-6">
+                    <h4>Formulario de Contacto</h4>
+                    <form id="form-contacto" class="p-3 bg-light shadow rounded">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark p-5">
+        <div class="footer-contenido text-white">
+            <div id="ubicacion">
+                <h4 class="pb-4 text-center">Ubícanos o Contáctanos</h4>
+                <div>
+                    <div class="info">
+                        <img src="img/map-pin.png" alt="Ubicación" />
+                        <p>Av. Luzuriaga 123, Huaraz - Perú</p>
+                    </div>
+                    <div class="info">
+                        <img src="img/mail.png" alt="Correo" />
+                        <p>PapiShop@gmail.com</p>
+                    </div>
+                    <div class="info">
+                        <img src="img/phone.png" alt="Teléfono" />
+                        <p>+51 936 623 658</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="redes">
+                <h4 class="pb-4 text-center">Redes Sociales</h4>
+                <div class="social">
+                    <img src="img/facebook.png" alt="Facebook" />
+                    <img src="img/instagram-square.png" alt="Instagram" />
+                    <img src="img/github.png" alt="GitHub" />
+                    <img src="img/youtube.png" alt="YouTube" />
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-white text-center pt-4">&copy; Papi Shop 2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.5.3.3.js"></script>
+    <script src="lib/js/contacto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tienda</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="lib/bootstrap/bootstrap.5.3.3.css" />
+        <script src="lib/bootstrap/bootstrap.5.3.3.js"></script>
+        <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="css/tienda.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+    </head>
+    <body>
+        <header>
+            <section id="pre-encabezado">
+                <div class="logo">
+                    <span class="papi">SCOTT</span>
+                    <span class="shop">SHOP</span>
+                </div>
+                <div class="servicio">
+                    <p>Llamanos mano</p>
+                    <a href="tel:+43693 422">(43) - 693 422</a>
+                </div>
+            </section>
+
+            <section id="nav-arriba" class="bg-dark mb-3">
+                
+                    <ul class="horizontal">
+                       
+                    </ul>
+                
+                   
+                </div>
+
+                <nav class="text-white">
+                    <ul id="encabezado">
+                        <li><a class="nav-item nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="nav-item nav-link" href="productos.html">Productos</a></li>
+                        
+                        <li>
+                            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link" href="carrito.html">Carrito</a>
+
+                        </li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <img class="corazon" src="img/ico-corazon.png" alt="" />
+                    <img class="carrito" src="img/carrito.png" alt=""  />
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="contenedor">
+                <div id="izquierda">
+                    <p class="titulo">Filtrar por precio</p>
+                    <aside>
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="precio" value="0-50">
+                                    S/0 - S/50
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="precio" value="51-100">
+                                    S/51 - S/100
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="precio" value="101-200">
+                                    S/101 - S/200
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="precio" value="201-500">
+                                    S/201 - S/500
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="precio" value="500+">
+                                    Más de S/500
+                                </label>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div id="productos">
+                    <h4>
+                        Componentes para PC
+                    </h4>
+                    <div id="pc">
+                        <div>
+                            <img src="img/tarjeta-gráfica.png" alt="">
+                            <p>Rtx 3090 Nvidia</p>
+                            <p>S/. 1800</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/placa-madre.png" alt="">
+                            <p>Placa madre MSI</p>
+                            <p>S/. 390</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/intel-i7-procesador.png" alt="">
+                            <p>Procesador intel i7</p>
+                            <p>S/. 420</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/fuente-poder.png" alt="">
+                            <p>Fuente de poder 750 watts</p>
+                            <p>S/. 250</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/gabinete gamer.png" alt="">
+                            <p>Gabinete gamer</p>
+                            <p>S/. 440</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/memoria ram.png" alt="">
+                            <p>Memoria RAM HyperX</p>
+                            <p>S/. 330</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/ssd samsung.png" alt="">
+                            <p>SSD Samsung</p>
+                            <p>S/. 370</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/kit gamer.png" alt="">
+                            <p>Mouse y teclado Gamer</p>
+                            <p>S/. 180</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4>
+                        Accesorios de todo tipo
+                    </h4>
+                    <div id="accesorios">
+                        <div>
+                            <img src="img/soporte para celular.png" alt="">
+                            <p>Soporte para celular</p>
+                            <p>S/. 40</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/audifonos.png" alt="">
+                            <p>Audifono alambricos</p>
+                            <p>S/. 30</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/cables hack.png" alt="">
+                            <p>Cables entrada Jack</p>
+                            <p>S/. 15</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/cargador movil.png" alt="">
+                            <p>Cargador movil</p>
+                            <p>S/. 30</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/carcasas de celular.png" alt="">
+                            <p>Case para celular</p>
+                            <p>S/. 20</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/cargador externo.png" alt="">
+                            <p>Cargador externo</p>
+                            <p>S/. 60</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/memorias usb.png" alt="">
+                            <p>Memorias usb</p>
+                            <p>S/. 25</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/guantes moto.png" alt="">
+                            <p>Guantes para moto</p>
+                            <p>S/. 120</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4>
+                        Ropa para caballeros y damas
+                    </h4>
+                    <div id="ropa">
+                        <div>
+                            <img src="img/buso negro.png" alt="">
+                            <p>Buso Negro</p>
+                            <p>S/. 45</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/camisas apiladas.png" alt="">
+                            <p>Camisas</p>
+                            <p>S/. 80</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/casaca pls.png" alt="">
+                            <p>Casaca acolchada</p>
+                            <p>S/. 90</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/chompa conta.png" alt="">
+                            <p>Casaca institucional</p>
+                            <p>S/. 60</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/casaca rosa.png" alt="">
+                            <p>Casaca para mujer</p>
+                            <p>S/. 80</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/chompa tejido mujer.png" alt="">
+                            <p>Chompa de algodon</p>
+                            <p>S/. 50</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/pantalon beige.png" alt="">
+                            <p>Pantalon beige</p>
+                            <p>S/. 55</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/pantalon militar.png" alt="">
+                            <p>pantalon militar</p>
+                            <p>S/. 60</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4>
+                        Electrodomésticos
+                    </h4>
+                    <div id="electrodomesticos">
+                        <div>
+                            <img src="img/electrodomestico.png" alt="">
+                            <p>Lavadora</p>
+                            <p>S/. 460</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/cafetera.png" alt="">
+                            <p>Cafetera</p>
+                            <p>S/. 180</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/licuadora oster.png" alt="">
+                            <p>Licuadora oster</p>
+                            <p>S/. 340</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/refrigerador.png" alt="">
+                            <p>Refrigerador</p>
+                            <p>S/. 680</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/aire acondicionado.png" alt="">
+                            <p>Aire acondicionado</p>
+                            <p>S/. 420</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/ventilador.png" alt="">
+                            <p>Ventilador</p>
+                            <p>S/. 180</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/Horno microondas.png" alt="">
+                            <p>Horno microondas</p>
+                            <p>S/. 560</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="img/batidora.png" alt="">
+                            <p>Batidora</p>
+                            <p>S/. 220</p>
+                            <button>
+                                <a href="">
+                                    Comprar
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark p-5">
+            <div class="footer-contenido text-white">
+                <div id="ubicacion">
+                    <h4 class="pb-4 text-center">Ubícanos o Contáctanos</h4>
+                    <div>
+                        <div class="info">
+                            <img src="img/map-pin.png" alt="Ubicación" />
+                            <p>Av. Luzuriaga 123, Huaraz - Perú</p>
+                        </div>
+                        <div class="info">
+                            <img src="img/mail.png" alt="Correo" />
+                            <p>PapiShop@gmail.com</p>
+                        </div>
+                        <div class="info">
+                            <img src="img/phone.png" alt="Teléfono" />
+                            <p>+51 936 623 658</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="redes">
+                    <h4 class="pb-4 text-center">Redes Sociales</h4>
+                    <div class="social">
+                        <img src="img/facebook.png" alt="Facebook" />
+                        <img src="img/instagram-square.png" alt="Instagram" />
+                        <img src="img/github.png" alt="GitHub" />
+                        <img src="img/youtube.png" alt="YouTube" />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-white text-center pt-4">
+                    &copy; Papi Shop 2024. Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+        <script src="js/despliegue.js"></script>
+    </body>
+</html>

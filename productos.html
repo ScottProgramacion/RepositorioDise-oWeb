@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inicio: Tienda online</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="lib/bootstrap/bootstrap.5.3.3.css" />
+        <script src="lib/bootstrap/bootstrap.5.3.3.js"></script>
+        <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="/css/style.css">
+
+    
+
+
+
+</head>
+
+<body>
+    <header>
+        <section id="pre-encabezado">
+            <div class="logo">
+                <span class="papi">SCOTT</span>
+                <span class="shop">SHOP</span>
+            </div>
+            <div class="servicio">
+                <p>Llamanos mano</p>
+                <a href="tel:+43693 422">(43) - 693 422</a>
+            </div>
+        </section>
+
+        <section id="nav-arriba" class="bg-dark mb-3">
+            
+                <ul class="horizontal">
+                   
+                </ul>
+            
+               
+            </div>
+
+            <nav class="text-white">
+                <ul id="encabezado">
+                    <li><a class="nav-item nav-link" href="index.html">Inicio</a></li>
+                    <li><a class="nav-item nav-link" href="productos.html">Productos</a></li>
+                    <li>
+                        <a class="nav-item nav-link" href="carrito.html">Carrito</a>
+
+                    </li>
+                    
+                    <li>
+                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+            <div>
+                <img class="corazon" src="img/ico-corazon.png" alt="" />
+                <img class="carrito" src="img/carrito.png" alt=""  />
+            </div>
+        </section>
+    </header>
+
+
+
+    <main class="container my-5">
+        <!--  -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body" id="modalProductDetails">
+                        <!-- Detalles del producto dinámicos -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="modalAddToCart">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="search-input" class="form-control" placeholder="Buscar productos..."
+                    oninput="filterProducts()">
+            </div>
+        </div>
+        <div class="row" id="product-list"></div>
+
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+    </main>
+
+  
+    <footer class="bg-dark p-5">
+        <div class="footer-contenido text-white">
+            <div id="ubicacion">
+                <h4 class="pb-4 text-center">Ubícanos o Contáctanos</h4>
+                <div>
+                    <div class="info">
+                        <img src="img/map-pin.png" alt="Ubicación" />
+                        <p>Av. Luzuriaga 123, Huaraz - Perú</p>
+                    </div>
+                    <div class="info">
+                        <img src="img/mail.png" alt="Correo" />
+                        <p>PapiShop@gmail.com</p>
+                    </div>
+                    <div class="info">
+                        <img src="img/phone.png" alt="Teléfono" />
+                        <p>+51 936 623 658</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="redes">
+                <h4 class="pb-4 text-center">Redes Sociales</h4>
+                <div class="social">
+                    <img src="img/facebook.png" alt="Facebook" />
+                    <img src="img/instagram-square.png" alt="Instagram" />
+                    <img src="img/github.png" alt="GitHub" />
+                    <img src="img/youtube.png" alt="YouTube" />
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-white text-center pt-4">&copy; Papi Shop 2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+     const products = [
+    { id: 1, name: "PC Gamer", price: "S/ 500", image: "img/product-1.jpg" },
+    { id: 2, name: "Audifonos", price: "S/ 500", image: "img/audifonos.png" },
+    { id: 4, name: "Batidora", price: "S/ 500", image: "img/batidora.png" },
+    { id: 5, name: "Licuadora Oster", price: "S/ 500", image: "img/licuadora oster.png" },
+    { id: 6, name: "Drone", price: "S/ 500", image: "img/product-5.jpg" },
+    { id: 7, name: "Reloj", price: "S/ 500", image: "img/product-6.jpg" },
+    { id: 8, name: "Memoria ram", price: "S/ 500", image: "img/memoria ram.png" },
+    { id: 9, name: "ventilador", price: "S/ 500", image: "img/ventilador.png" },
+];
+
+
+        let currentPage = 1;
+        const itemsPerPage = 8;
+        let filteredProducts = products;
+
+        function renderProducts(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = page * itemsPerPage;
+            const currentProducts = filteredProducts.slice(start, end);
+
+            const productContainer = document.getElementById("product-list");
+            productContainer.innerHTML = "";
+
+            currentProducts.forEach(product => {
+                const productCard = `
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">Precio: ${product.price}</p>
+                            <button class="btn btn-primary" onclick="openProductModal(${product.id})">Añadir</button>
+                            </div>  </div>  </div>  `;
+                productContainer.innerHTML += productCard;
+            });
+        }
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+            const paginationContainer = document.getElementById("pagination");
+            paginationContainer.innerHTML = "";
+
+            if (totalPages === 0) return;
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageItem = `
+                <li class="page-item ${i === currentPage ? "active" : ""}">
+                    <a class="page-link" href="#" data-page="${i}">${i}</a>
+                </li>
+            `;
+                paginationContainer.innerHTML += pageItem;
+            }
+
+            // Botón "Siguiente"
+            if (currentPage < totalPages) {
+                paginationContainer.innerHTML += `
+                <li class="page-item">
+                    <a class="page-link" href="#" data-page="${currentPage + 1}">Siguiente</a>
+                </li>
+            `;
+            }
+
+            // Añadir eventos a los botones de paginación
+            paginationContainer.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const page = parseInt(e.target.dataset.page);
+                    changePage(page);
+                });
+            });
+        }
+
+        // Cambiar de página
+        function changePage(page) {
+            currentPage = page;
+            renderProducts(page);
+            renderPagination();
+        }
+
+        // Filtrar productos
+        function filterProducts() {
+            const query = document.getElementById("search-input").value.toLowerCase();
+            filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query)
+                
+            );
+            if (filteredProducts.length === 0) {
+    productContainer.innerHTML = '<p>No se encontraron productos.</p>';
+}
+            currentPage = 1;
+            renderProducts(currentPage);
+            renderPagination();
+        }
+
+
+        // *******************************
+        // CARRRITO
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+
+            const modalDetails = document.getElementById("modalProductDetails");
+            modalDetails.innerHTML = `
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="${product.image}" class="img-fluid rounded" alt="${product.name}">
+                </div>
+                <div class="col-md-6">
+                    <h4>${product.name}</h4>
+                    <p>Precio: <strong>${product.price}</strong></p>
+                    <div class="mb-3">
+                        <label for="size" class="form-label">Selecciona el color:</label>
+                        <select id="modalSize" class="form-select">
+                            <option value="38">Negro</option>
+                            <option value="38">Clasico</option>
+                            
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Cantidad:</label>
+                        <input type="number" id="modalQuantity" class="form-control" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+        `;
+
+            document.getElementById("modalAddToCart").dataset.productId = product.id;
+
+            const productModal = new bootstrap.Modal(document.getElementById("productModal"));
+            productModal.show();
+
+        }
+
+      // Añadir al carrito
+document.getElementById("modalAddToCart").addEventListener("click", function () {
+    const productId = this.dataset.productId;
+    const product = products.find(p => p.id == productId);
+
+    const size = document.getElementById("modalSize").value;
+    const quantity = parseInt(document.getElementById("modalQuantity").value);
+
+    // Aquí utilizamos la función addToCart que ya gestiona el carrito
+    addToCart(productId, product.name, product.price, quantity);
+
+    const productModal = bootstrap.Modal.getInstance(document.getElementById("productModal"));
+    productModal.hide();
+});
+
+
+        // Inicializar
+        renderProducts(currentPage);
+        renderPagination();
+
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];  // Recuperar carrito guardado si existe
+        function addToCart(productId, productName, productPrice, quantity) {
+    // Buscar si el producto ya está en el carrito
+    const existingProduct = cart.find(p => p.id === productId);
+
+    if (existingProduct) {
+        // Si ya existe, incrementar la cantidad y actualizar el total
+        existingProduct.quantity += quantity;  // Sumamos la cantidad
+        existingProduct.total = existingProduct.quantity * existingProduct.price;  // Calculamos el nuevo total
+    } else {
+        // Si no existe, agregar el producto al carrito
+        cart.push({
+            id: productId,
+            name: productName,
+            price: parseFloat(productPrice),
+            quantity: quantity,
+            total: parseFloat(productPrice) * quantity // Guardamos el precio total
+        });
+    }
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Producto añadido al carrito");
+}
+
+    </script>
+
+</body>
+
+</html>

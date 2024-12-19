@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(230, 223, 176);
+}
+
+.corazon{
+    width: 25px;
+}
+
+.carrito{
+    width: 25px;
+}
+
+#tres-im{
+    justify-content: center;
+    align-items: center;
+}
+
+/*beneficios*/
+#beneficios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+#beneficios .bg-warning {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#beneficios div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 345px;
+}
+
+#beneficios div h4{
+    padding-left: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+}
+
+#beneficios div img{
+    width: 45px;
+}
+/*Fin de beneficios*/
+
+/*Inicio de categorias*/
+.letra-grande {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.letra-grande h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.linea {
+    border-top: 2px dotted #999;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+#nombre-cate{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+#nombre-cate img{
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.ct{
+    display: flex;
+    align-items: center;
+}
+
+.ct div{
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.ct h6{
+    font-weight: bolder;
+}
+
+.ct div:hover{
+    background-color: rgb(255, 193, 7);
+}
+
+.ct img:hover{
+    transform: rotate(10deg);
+}
+
+/*Productos destacados*/
+.destacado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.destacado div img{
+    width: 250px;
+}
+/*Productos recientes*/
+.reciente{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.reciente div img{
+    width: 250px;
+}
+
+/*Marcas*/
+#marca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 45px 0;
+    background-color: #f9f9f9;
+}
+
+.marc-l {
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+}
+
+.marc-l img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
