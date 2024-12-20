@@ -1,0 +1,39 @@
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+}
+
+.footer-contenido{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#ubicacion img{
+    width: 30px;
+    height: 30px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+.info p{
+    padding-left: 15px;
+}
+
+.social img{
+    width: 30px;
+    margin: 0px 8px;
+}
+
+footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+footer img {
+    margin: 0;
+}

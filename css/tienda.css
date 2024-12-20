@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    display: flex;
+    margin: 20px;
+}
+
+main h4{
+    font-weight: bolder;
+}
+
+#izquierda {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+}
+
+#izquierda p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#izquierda ul {
+    list-style: none;
+    padding: 0;
+}
+
+#izquierda ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eaeaea;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#productos {
+    width: 90%;
+    padding: 15px;
+}
+
+#productos > div {
+    margin-bottom: 20px;
+}
+
+#productos h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#productos div div {
+    margin: 1%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#productos img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+#productos p {
+    margin: 5px 0;
+}
+
+#productos button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fdd835;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#pc{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 30px;
+}
+
+#accesorios{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 30px;
+}
+
+#ropa{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 30px;
+}
+
+#electrodomesticos{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#productos button a {
+    color: white;
+    text-decoration: none;
+}
+
+#productos button:hover {
+    background-color: #333333;
+}
